@@ -1,0 +1,4 @@
+{
+  "testRepo": "rate-limit-api-calls-solution",
+  "pathToFile": "cypress/integration/tests/test.spec.js"
+}
