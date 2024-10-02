@@ -1,4 +1,3 @@
-//your JS code here. If required.
 const fetchButton = document.getElementById('fetch-button');
 const clickCountEl = document.getElementById('click-count');
 const resultsEl = document.getElementById('results');
@@ -14,7 +13,11 @@ const fetchData = () => {
     .then(data => {
       // Display the fetched result in the 'results' div
       const resultDiv = document.createElement('div');
-      resultDiv.innerText = `Todo: ${data.title}`;
+      resultDiv.innerHTML = `
+        <p>ID: ${data.id}</p>
+        <p>Title: ${data.title}</p>
+        <p>Completed: ${data.completed}</p>
+      `;
       resultsEl.appendChild(resultDiv);
     })
     .catch(error => {
